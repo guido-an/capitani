@@ -3,17 +3,53 @@ let firstElement = 0
 let secondElement = 1
 let thirdElement = 2
 
+// function displayVictories () {
+//   return document.getElementById('carousel-victories').innerHTML +=
+//   `<div class="carousel-img-container">
+//      <img class="carousel-img" src="${victories[firstElement].img}" alt="${victories[firstElement].name}" test="ciao">
+//     </div>
+
+//     <div class="carousel-img-container">
+//      <img class="carousel-img" src="${victories[secondElement].img}" alt="${victories[secondElement].name}">
+//     </div>
+
+//     <div class="carousel-img-container">
+//      <img class="carousel-img" src="${victories[thirdElement].img}" alt="${victories[thirdElement].name}">
+//      </div>
+
+//     `
+// }
+
 function displayVictories () {
   return document.getElementById('carousel-victories').innerHTML +=
-  `<div class="carousel-img-container">
-     <img class="carousel-img" src="${victories[firstElement].img}" alt="${victories[firstElement].name}">
+  `<div id="victory-carousel-container">
+    <div>
+      <div class="carousel-img-container">
+      <img class="carousel-img" src="${victories[firstElement].img}" alt="${victories[firstElement].name}" test="ciao">
+     </div>
+     <p class="victory-name">${victories[firstElement].name}</p>
+     <p class="victory-date">${victories[firstElement].date}</p>
     </div>
-    <div class="carousel-img-container">
-     <img class="carousel-img" src="${victories[secondElement].img}" alt="${victories[secondElement].name}">
+
+    <div>
+      <div class="carousel-img-container" id="second-victory-container">
+      <img class="carousel-img" src="${victories[secondElement].img}" alt="${victories[secondElement].name}" test="ciao">
+     </div>
+     <p class="victory-name">${victories[secondElement].name}</p>
+     <p class="victory-date">${victories[secondElement].date}</p>
+
     </div>
-    <div class="carousel-img-container">
-     <img class="carousel-img" src="${victories[thirdElement].img}" alt="${victories[thirdElement].name}">
+    <div>
+      <div class="carousel-img-container" id="third-victory-container">
+      <img class="carousel-img" src="${victories[thirdElement].img}" alt="${victories[thirdElement].name}" test="ciao">
+     </div>
+     <p class="victory-name">${victories[thirdElement].name}</p>
+     <p class="victory-date">${victories[thirdElement].date}</p>
+
     </div>
+
+  </div>
+
     `
 }
 
@@ -23,14 +59,29 @@ function hideVictories () {
 
 window.addEventListener('load', function () {
   displayVictories()
-
   document.getElementById('next-arrow-victories').addEventListener('click', (e) => {
     handleArrows(e, 'increase')
   })
   document.getElementById('prev-arrow-victories').addEventListener('click', (e) => {
     handleArrows(e, 'decrease')
   })
+
+  // var elements = document.getElementsByClassName('victory-img')
+
+  // for (var i = 0; i < elements.length; i++) {
+  //   elements[i].addEventListener('click', handleHoverImg, false)
+  // }
 })
+
+// var handleHoverImg = function () {
+//   var attribute = this.getAttribute('alt')
+//   console.log(this)
+//   document.getElementById('victory-hover').innerHTML += attribute
+// }
+
+// var handleHoverOut = function () {
+//   // this.style.opacity = 1
+// }
 
 function handleArrows (e, operator) {
   e.preventDefault()

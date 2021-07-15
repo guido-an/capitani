@@ -188,7 +188,7 @@ background: var(--main-color);
 /* names */
 #athletes-names {
   color: #fff;
-  margin-top: 80px;
+  margin-top: 40px;
   padding: 0 var(--padding-sides);
 }
 #athletes-names {
@@ -207,6 +207,15 @@ background: var(--main-color);
 }
 #names-container {
   margin-top: 40px
+}
+#second-victory-container{
+  position: relative;
+  bottom: 25px;
+  background-color: var(--main-color);
+}
+#third-victory-container{
+  position: relative;
+  bottom: 50px
 }
 
 @media(min-width: 768px){
@@ -267,6 +276,21 @@ background: var(--main-color);
   justify-content: center;
   margin-top: 40px;
   padding-bottom: 80px
+}
+
+#victory-carousel-container {
+  display: flex;
+}
+.victory-name, .victory-date {
+  max-width: 220px;
+  text-align: left;
+  position: relative;
+  left: 30px
+}
+.victory-date {
+  position: relative;
+  bottom: 10px;
+  font-size: 14px
 }
 
 @media(min-width: 768px){
