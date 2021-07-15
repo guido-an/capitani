@@ -25,7 +25,7 @@ function displayVictories () {
   `<div id="victory-carousel-container">
     <div>
       <div class="carousel-img-container">
-      <img class="carousel-img" src="${victories[firstElement].img}" alt="${victories[firstElement].name}" test="ciao">
+      <img class="carousel-img" src="${victories[firstElement].img}" alt="${victories[firstElement].name}">
      </div>
      <p class="victory-name">${victories[firstElement].name}</p>
      <p class="victory-date">${victories[firstElement].date}</p>
@@ -33,7 +33,7 @@ function displayVictories () {
 
     <div>
       <div class="carousel-img-container" id="second-victory-container">
-      <img class="carousel-img" src="${victories[secondElement].img}" alt="${victories[secondElement].name}" test="ciao">
+      <img class="carousel-img" src="${victories[secondElement].img}" alt="${victories[secondElement].name}">
      </div>
      <p class="victory-name">${victories[secondElement].name}</p>
      <p class="victory-date">${victories[secondElement].date}</p>

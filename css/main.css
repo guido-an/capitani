@@ -34,11 +34,14 @@ html, body {
   overscroll-behavior: none;
   margin: 0;
   padding: 0;
+  background-color: var(--secondary-color);
 }
 
 /* HEADER  */
 header {
   background: url('../img/texture-header.jpg');
+  background-size: cover;
+
   color: #fff;
   height: 350px;
   padding: 10px var(--padding-sides)
@@ -121,13 +124,16 @@ header {
 
 /* BODY */
 #body {
-  /* background: url('/img/texture-body.jpg'); */
+  background: url('/img/texture-body.jpg');
+  background-size: cover;
+  background-position: center bottom;
   /* padding: 5vw var(--padding-sides); */
-  background-image: linear-gradient(to bottom, #252021 , #6b6e72);
+  /* background-image: linear-gradient(to bottom, #252021 , #6b6e72); */
   clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
   position: relative;
   bottom: 150px;
   background-color: #fafafa;
+  overflow:hidden;
 }
 
 /* atheletes */
@@ -319,14 +325,47 @@ background: var(--main-color);
 }
 
 
+/* SPONSOR */
 
+#sponsor-section {
+  background-color: var(--secondary-color);
+  position: relative;
+  bottom: 60px;
+  color: #fff;
+  padding: 0 var(--padding-sides) 80px;
+}
+#sponsor-section img {
+   display: block;
+   margin: 30px auto 0
+}
+@media(min-width: 768px){
+  #sponsor-logos-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+  #sponsor-section img {
 
+    margin:0 20px
+ }
 
+ #rosti {
+   position: relative;
+   top: 30px
+ }
+ #qst {
+  position: relative;
+  top: 20px
+}
+}
 
 /* FOOTER */
 footer {
   background-color: #b5e122;
-  padding: 1px var(--padding-sides);
+  padding: 10px var(--padding-sides) 30px;
+
+
 }
 footer p {
   font-size: 14px;
