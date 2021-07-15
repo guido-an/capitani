@@ -38,7 +38,7 @@ html, body {
 
 /* HEADER  */
 header {
-  background: url('/img/texture-header.jpg');
+  background: url('../img/texture-header.jpg');
   color: #fff;
   height: 350px;
   padding: 10px var(--padding-sides)
@@ -124,7 +124,7 @@ header {
   /* background: url('/img/texture-body.jpg'); */
   /* padding: 5vw var(--padding-sides); */
   background-image: linear-gradient(to bottom, #252021 , #6b6e72);
-  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
   position: relative;
   bottom: 150px;
   background-color: #fafafa;
