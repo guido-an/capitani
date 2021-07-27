@@ -97,14 +97,14 @@ header {
 }
 
 #pre-hero p {
-    line-height: 28px;
+    line-height: 32px;
     letter-spacing: 0.2px;
-    font-size: 16px;
+    font-size: 25px;
 }
 
 @media(min-width: 768px) {
     #pre-hero p {
-        max-width: 70vw
+        max-width: 80vw
     }
 }
 
@@ -290,9 +290,11 @@ header {
 #athletes-title {
     max-width: 100%
 }
+
 #athletes-names .divider {
     width: 160px;
 }
+
 .divider {
     width: 120px;
     height: 10px;
