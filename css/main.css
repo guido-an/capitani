@@ -337,13 +337,23 @@ header {
         right: -20px;
         top: 350px
     }
-    #names-container {
+    /* #names-container {
         display: flex;
         justify-content: space-evenly;
-    }
+    } */
     #atleti-carousel-container {
         position: relative
     }
+
+    .names{
+      display: flex;
+      justify-content: space-evenly;
+      text-align: left;
+  }
+  .names p {
+    width: 20%;
+    font-style: italic;
+  }
 }
 
 
@@ -452,10 +462,10 @@ header {
         right: -20px;
         top: 220px
     }
-    #names-container {
+    /* #names-container {
         display: flex;
         justify-content: space-evenly;
-    }
+    } */
 }
 
 
