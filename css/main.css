@@ -1,15 +1,11 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
-
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-
-
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -17,498 +13,361 @@
 
 
 /* Add the declaration on top */
-
 @font-face {
-    font-family: 'CustomFont';
-    src: url('fonts/DIN-RegularItalic.woff') format('woff'), url('fonts/DIN-RegularItalic.woff2') format('woff2');
-}
+  font-family: 'CustomFont';
+  src: url('fonts/DIN-RegularItalic.woff') format('woff'),
+       url('fonts/DIN-RegularItalic.woff2') format('woff2');
+  }
 
- :root {
+  :root {
     --padding-sides: 8vw;
     --main-color: #b5e122;
     --secondary-color: #241f20
-}
+  }
 
-html,
-body {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-    font-family: 'CustomFont', Arial, sans-serif;
-    overflow-x: hidden;
-    overscroll-behavior: none;
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
+html, body {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: 'CustomFont', Arial, sans-serif;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
 }
-
 
 /* HEADER  */
-
 header {
-    background: url('../img/texture-header.jpg');
-    background-size: cover;
-    color: #fff;
-    height: 350px;
-    padding: 10px var(--padding-sides)
-}
+  background: url('../img/texture-header.jpg');
+  background-size: cover;
 
+  color: #fff;
+  height: 350px;
+  padding: 10px var(--padding-sides)
+}
 #logo-container img {
-    width: 300px;
+  width: 300px;
 }
-
 #logo-container p {
-    font-size: 48px;
-    position: relative;
-    bottom: 30px
+  font-size: 48px;
+  position: relative;
+  bottom: 30px
 }
-
 #social-header {
+  display: flex;
+  position:relative;
+  bottom: 20px;
+}
+#social-header a{
+  position:relative;
+  left: 10px;
+  top: 7px
+}
+
+@media(min-width: 768px){
+  header {
     display: flex;
-    position: relative;
-    bottom: 20px;
-}
+    justify-content: space-between;
+    padding: 20px var(--padding-sides);
+    height: 250px
+  }
 
-#social-header a {
-    position: relative;
-    left: 10px;
-    top: 7px
+  #social-header {
+    top: 10px
+  }
 }
-
-@media(min-width: 768px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px var(--padding-sides);
-        height: 250px
-    }
-    #social-header {
-        top: 10px
-    }
-}
-
 
 /* PRE HERO */
-
 #pre-hero {
-    background-color: var(--secondary-color);
-    padding: 40px var(--padding-sides);
-    color: #fff
+  background-color: var(--secondary-color);
+  padding: 40px var(--padding-sides);
+  color: #fff
 }
-
 #pre-hero p {
-    line-height: 28px;
-    letter-spacing: 0.2px;
-    font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  font-size: 16px;
 }
-
-@media(min-width: 768px) {
-    #pre-hero p {
-        max-width: 70vw
-    }
+@media(min-width: 768px){
+  #pre-hero p {
+   max-width: 70vw
+  }
 }
-
 
 /* HERO */
-
 #hero {
-    display: inline-block;
-    position: relative;
-    height: 60vw;
-    /* trick (using width for height) to mymic img resize */
-    width: 100%;
-    background: var(--main-color);
-    box-sizing: border-box;
-    clip-path: polygon(0 0, 100% 0%, 100% 87%, 0% 100%);
-    z-index: 99
+  display: inline-block;
+  position: relative;
+  height: 60vw; /* trick (using width for height) to mymic img resize */
+  width: 100%;
+  background: var(--main-color);
+  box-sizing: border-box;
+  clip-path: polygon(0 0, 100% 0%, 100% 87%, 0% 100%);
+  z-index: 99
 }
-
 #hero img {
-    position: absolute;
-    top: 20px;
-    /* equal to border thickness */
-    bottom: 10px;
-    /* equal to border thickness */
-    width: 100%;
-    /* container height */
-    height: auto;
-    /* container height */
-    clip-path: polygon(0 0, 100% 0%, 100% 87%, 0% 100%);
-    z-index: 99
+  position: absolute;
+  top: 20px; /* equal to border thickness */
+  bottom: 10px;/* equal to border thickness */
+  width: 100%; /* container height */
+  height: auto; /* container height */
+  clip-path: polygon(0 0, 100% 0%, 100% 87%, 0% 100%);
+  z-index: 99
 }
 
-@media(min-width: 768px) {
-    #hero img {
-        top: 40px;
-    }
+@media(min-width: 768px){
+  #hero img {
+    top: 40px;
+  }
 }
-
 
 /* BODY */
-
 #body {
-    background: url('../img/texture-body.jpg');
-    background-size: cover;
-    background-position: center bottom;
-    /* padding: 5vw var(--padding-sides); */
-    /* background-image: linear-gradient(to bottom, #252021 , #6b6e72); */
-    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
-    position: relative;
-    bottom: 150px;
-    background-color: #fafafa;
-    overflow: hidden;
+  background: url('../img/texture-body.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  /* padding: 5vw var(--padding-sides); */
+  /* background-image: linear-gradient(to bottom, #252021 , #6b6e72); */
+  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
+  position: relative;
+  bottom: 150px;
+  background-color: #fafafa;
+  overflow:hidden;
 }
-
 
 /* atheletes */
-
 #athletes-container {
-    padding-top: 200px;
+  padding-top: 200px;
 }
-
 #carousel-athletes {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px
+  display: flex;
+  justify-content: center;
+  margin-top: 60px
 }
 
-.carousel-img-container:nth-child(even) {
-    background: var(--main-color);
+.carousel-img-container:nth-child(even){
+background: var(--main-color);
 }
-
-.carousel-img-container:nth-child(odd) {
-    background: var(--secondary-color);
+.carousel-img-container:nth-child(odd){
+  background: var(--secondary-color);
 }
 
 .carousel-img-container {
-    display: inline-block;
-    position: relative;
-    min-width: 260px;
-    /* this means 30px border */
-    min-height: 346px;
-    /* this means 30px border */
-    box-sizing: border-box;
-    clip-path: polygon(0 6%, 100% 0, 99% 93%, 0% 100%);
-    margin: 0 20px
+  display: inline-block;
+  position: relative;
+  min-width: 260px; /* this means 30px border */
+  min-height: 346px; /* this means 30px border */
+  box-sizing: border-box;
+  clip-path: polygon(0 6%, 100% 0, 99% 93%, 0% 100%);
+  margin: 0 20px
 }
-
 .carousel-img {
-    position: absolute;
-    left: 30px;
-    /* equal to border thickness */
-    top: 30px;
-    /* equal to border thickness */
-    width: 200px;
-    height: auto;
-    clip-path: polygon(0 6%, 100% 0, 99% 93%, 0% 100%);
+  position: absolute;
+  left: 30px; /* equal to border thickness */
+  top: 30px; /* equal to border thickness */
+  width: 200px;
+  height: auto;
+  clip-path: polygon(0 6%, 100% 0, 99% 93%, 0% 100%);
+}
+.carousel-img-container:nth-child(2){
+  position: relative;
+  bottom: 25px
+}
+.carousel-img-container:nth-child(3){
+  position: relative;
+  bottom: 50px
 }
 
-.carousel-img-container:nth-child(2) {
-    position: relative;
-    bottom: 25px
+#prev-arrow, #next-arrow {
+  background-color: #241f20;
+  padding: 30px 10px;
+  margin: 0 20px;
+  z-index: 999;
 }
-
-.carousel-img-container:nth-child(3) {
-    position: relative;
-    bottom: 50px
-}
-
-#prev-arrow,
-#next-arrow {
-    background-color: #241f20;
-    padding: 30px 10px;
-    margin: 0 20px;
-    z-index: 999;
-}
-
 #athletes-arrows-container {
-    display: flex;
-    justify-content: center;
-    z-index: 99;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
 }
-
-#atleti-carousel-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px
-}
-
-#atleti-carousel-container .caption p {
-    text-transform: uppercase;
-}
-
-#victory-carousel-container .caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 100%;
-    clip-path: polygon(0 6%, 100% 0, 99% 93%, 0% 100%);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    visibility: hidden;
-    cursor: pointer;
-}
-
-#victory-carousel-container .carousel-img-container:hover .caption {
-    visibility: visible;
-}
-
-#victory-carousel-container>div {
-    position: relative;
-    ;
-}
-
-#victory-carousel-container .caption:before {
-    content: '';
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 200px;
-    height: 84%;
-    transform: translate(-50%, -50%);
-    clip-path: polygon(0 6%, 100% 0, 99% 93%, 0% 100%);
-}
-
 
 /* names */
-
 #athletes-names {
-    color: #fff;
-    margin-top: 40px;
-    padding: 0 var(--padding-sides);
+  color: #fff;
+  margin-top: 40px;
+  padding: 0 var(--padding-sides);
 }
-
 #athletes-names {
-    position: relative
+  position: relative
 }
-
-#athletes-title {
-    max-width: 100%
-}
-#athletes-names .divider {
-    width: 160px;
+#athletes-title{
+  max-width: 100px
 }
 .divider {
-    width: 120px;
-    height: 10px;
-    background-color: var(--main-color);
-    position: absolute;
-    top: 30px;
-    clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+  width: 120px;
+  height: 10px;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 30px;
+  clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
 }
-
 #names-container {
-    margin-top: 40px
+  margin-top: 40px
+}
+#second-victory-container{
+  position: relative;
+  bottom: 25px;
+  background-color: var(--main-color);
+}
+#third-victory-container{
+  position: relative;
+  bottom: 50px
 }
 
-#second-victory-container {
-    position: relative;
-    bottom: 25px;
-    background-color: var(--main-color);
+@media(min-width: 768px){
+  #athletes-container {
+    padding-top: 160px
+  }
+  #carousel-athletes {
+    position: relative
+  }
+  #prev-arrow {
+    position: absolute;
+    cursor: pointer;
+    z-index: 99;
+    left: -20px;
+    top: 350px
+  }
+  #next-arrow {
+    position: absolute;
+    z-index: 99;
+    right: -20px;
+    top: 350px
+  }
+  #names-container {
+   display: flex;
+   justify-content: space-evenly;
+  }
 }
-
-#third-victory-container {
-    position: relative;
-    bottom: 50px
-}
-
-@media(min-width: 768px) {
-    #athletes-container {
-        padding-top: 160px
-    }
-    #carousel-athletes {
-        position: relative
-    }
-    #prev-arrow {
-        position: absolute;
-        cursor: pointer;
-        z-index: 99;
-        left: -20px;
-        top: 350px
-    }
-    #next-arrow {
-        position: absolute;
-        z-index: 99;
-        right: -20px;
-        top: 350px
-    }
-    #names-container {
-        display: flex;
-        justify-content: space-evenly;
-    }
-    #atleti-carousel-container {
-        position: relative
-    }
-}
-
 
 /* VICTORIES */
-
 #victories-container {
-    padding: 0 var(--padding-sides);
-    margin-top: 80px;
-    color: #fff;
-    position: relative;
+  padding: 0 var(--padding-sides);
+  margin-top: 80px;
+  color: #fff;
+  position: relative;
 }
 
 #victories-container .divider {
-    width: 220px;
-    height: 10px;
-    background-color: var(--main-color);
-    position: absolute;
-    top: 30px;
-    clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+  width: 220px;
+  height: 10px;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 30px;
+  clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
 }
-
-#prev-arrow-victories,
-#next-arrow-victories {
-    background-color: #241f20;
-    padding: 30px 10px;
-    margin: 0 20px;
+#prev-arrow-victories, #next-arrow-victories {
+  background-color: #241f20;
+  padding: 30px 10px;
+  margin: 0 20px;
 }
-
 #victories-arrows-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px
+  display: flex;
+  justify-content: center;
+  margin-top: 80px
 }
 
 #carousel-victories {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    padding-bottom: 80px
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 80px
 }
 
 #victory-carousel-container {
-    display: flex;
+  display: flex;
 }
-
-.victory-name,
+.victory-name, .victory-date {
+  max-width: 220px;
+  text-align: left;
+  position: relative;
+  left: 30px
+}
 .victory-date {
-    max-width: 220px;
-    text-align: left;
+  position: relative;
+  bottom: 10px;
+  font-size: 14px
+}
+
+@media(min-width: 768px){
+
+  #carousel-victories {
     position: relative;
-    padding-left: 20px;
-    /* left: 30px */
-}
-
-.victory-date {
-    position: relative;
-    bottom: 10px;
-    font-size: 14px
-}
-
-#prev-arrow-atleti,
-#next-arrow-atleti {
-    background-color: #241f20;
-    padding: 30px 10px;
-    margin: 0 20px;
-}
-
-#atleti-arrows-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px
-}
-
-#atleti-carousel-container {
-    display: flex;
-}
-
-@media(min-width: 768px) {
-    #carousel-victories {
-        position: relative;
-        margin-top: 0px
-    }
-    #prev-arrow-victories {
-        position: absolute;
-        cursor: pointer;
-        z-index: 99;
-        left: -20px;
-        top: 220px
-    }
-    #next-arrow-victories {
-        position: absolute;
-        z-index: 99;
-        right: -20px;
-        top: 220px
-    }
-    #prev-arrow-atleti {
-        position: absolute;
-        cursor: pointer;
-        z-index: 99;
-        left: -20px;
-        top: 220px
-    }
-    #next-arrow-atleti {
-        position: absolute;
-        z-index: 99;
-        right: -20px;
-        top: 220px
-    }
-    #names-container {
-        display: flex;
-        justify-content: space-evenly;
-    }
+    margin-top: 0px
+  }
+  #prev-arrow-victories {
+    position: absolute;
+    cursor: pointer;
+    z-index: 99;
+    left: -20px;
+    top: 220px
+  }
+  #next-arrow-victories {
+    position: absolute;
+    z-index: 99;
+    right: -20px;
+    top: 220px
+  }
+  #names-container {
+   display: flex;
+   justify-content: space-evenly;
+  }
 }
 
 
 /* SPONSOR */
 
 #sponsor-section {
-    background-color: var(--secondary-color);
-    position: relative;
-    bottom: 60px;
-    color: #fff;
-    padding: 0 var(--padding-sides) 80px;
+  background-color: var(--secondary-color);
+  position: relative;
+  bottom: 60px;
+  color: #fff;
+  padding: 0 var(--padding-sides) 80px;
 }
-
 #sponsor-section img {
-    display: block;
-    margin: 30px auto 0
+   display: block;
+   margin: 30px auto 0
 }
+@media(min-width: 768px){
+  #sponsor-logos-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+  #sponsor-section img {
 
-@media(min-width: 768px) {
-    #sponsor-logos-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-top: 60px;
-        align-items: center;
-    }
-    #sponsor-section img {
-        margin: 0 20px
-    }
-    #rosti {
-        position: relative;
-        /* top: 30px */
-    }
-    #qst {
-        position: relative;
-        /* top: 20px */
-    }
-    #sponsor-logos-container>div {
-        text-align: center;
-    }
+    margin:0 20px
+ }
+
+ #rosti {
+   position: relative;
+   top: 30px
+ }
+ #qst {
+  position: relative;
+  top: 20px
 }
-
+}
 
 /* FOOTER */
-
 footer {
-    background-color: #b5e122;
-    padding: 10px var(--padding-sides) 40px;
+  background-color: #b5e122;
+  padding: 10px var(--padding-sides) 40px;
 }
-
 footer p {
-    font-size: 14px;
-    font-weight: 400;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 
@@ -523,29 +382,27 @@ footer p {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
-
 
 /*
  * A better looking default horizontal rule
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
-
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -559,39 +416,34 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
-
 
 /*
  * Remove default fieldset styles.
  */
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
-
 
 /*
  * Allow only vertical resizing of textareas.
  */
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
-
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 
 /*
  * Hide visually and from screen readers
@@ -599,9 +451,8 @@ textarea {
 
 .hidden,
 [hidden] {
-    display: none !important;
+  display: none !important;
 }
-
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -613,18 +464,17 @@ textarea {
  */
 
 .sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    /* 1 */
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
 }
-
 
 /*
  * Extends the .sr-only class to allow the element
@@ -634,24 +484,22 @@ textarea {
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    white-space: inherit;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
-
 
 /*
  * Hide visually and from screen readers, but maintain layout
  */
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
-
 
 /*
  * Clearfix: contain floats
@@ -667,14 +515,13 @@ textarea {
 
 .clearfix::before,
 .clearfix::after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix::after {
-    clear: both;
+  clear: both;
 }
-
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -683,16 +530,15 @@ textarea {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+  /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
-
 
 /* ==========================================================================
    Print styles.
@@ -701,60 +547,71 @@ textarea {
    ========================================================================== */
 
 @media print {
-    *,
-    *::before,
-    *::after {
-        background: #fff !important;
-        color: #000 !important;
-        /* Black prints faster */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]::after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]::after {
-        content: " (" attr(title) ")";
-    }
-    /*
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-    a[href^="#"]::after,
-    a[href^="javascript:"]::after {
-        content: "";
-    }
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
+
