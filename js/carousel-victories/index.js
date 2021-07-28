@@ -45,7 +45,7 @@ function displayVictories () {
     </div>
     <div>
       <div class="carousel-img-container" id="third-victory-container">
-      <img class="carousel-img" src="${victories[thirdElement].img}" alt="${victories[thirdElement].name}" test="ciao">
+      <img class="carousel-img" src="${victories[thirdElement].img}" alt="${victories[thirdElement].name}">
       <div class="caption">
      <p class="victory-name">${victories[thirdElement].name}</p>
      <p class="victory-date">${victories[thirdElement].date}</p>

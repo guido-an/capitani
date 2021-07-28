@@ -502,12 +502,17 @@ header {
     }
     #rosti, #penta {
         position: relative;
-        left: 60px;
+        left: 80px;
         /* top: 30px */
     }
-    #qst {
+    #qst, #trasporti {
         position: relative;
+        left: 40px
         /* top: 20px */
+    }
+    #cavaliere {
+      position: relative;
+      right: 40px
     }
     #sponsor-logos-container>div {
         text-align: center;
