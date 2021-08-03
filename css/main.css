@@ -502,10 +502,14 @@ header {
     #sponsor-section img {
         margin: 0 20px
     }
-    #rosti, #penta {
+    #rosti {
         position: relative;
         left: 80px;
         /* top: 30px */
+    }
+    #quick {
+      position: relative;
+      left: 50px
     }
     #qst, #trasporti {
         position: relative;
